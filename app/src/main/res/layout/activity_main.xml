@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.student.soccerstats.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Player Info"
+        android:id="@+id/txtvwTitle"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter"
+        android:id="@+id/btnEnter"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/btnClear"
+        android:layout_toStartOf="@+id/btnClear"
+        android:onClick="addPlayer" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/btnClear"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/txtvwTitle"
+        android:layout_alignStart="@+id/txtvwTitle"
+        android:onClick="clearDatabase" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:id="@+id/btnNext"
+        android:layout_alignTop="@+id/btnClear"
+        android:layout_toRightOf="@+id/btnClear"
+        android:layout_toEndOf="@+id/btnClear"
+        android:onClick="goToNext"
+        android:nestedScrollingEnabled="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:id="@+id/txtvwName"
+        android:layout_marginTop="85dp"
+        android:layout_below="@+id/txtvwTitle"
+        android:layout_toRightOf="@+id/btnEnter"
+        android:layout_toEndOf="@+id/btnEnter" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team"
+        android:id="@+id/txtvwTeam"
+        android:layout_below="@+id/txtvwName"
+        android:layout_alignLeft="@+id/txtvwName"
+        android:layout_alignStart="@+id/txtvwName"
+        android:layout_marginTop="36dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Country"
+        android:id="@+id/txtvwCountry"
+        android:layout_below="@+id/txtvwTeam"
+        android:layout_alignLeft="@+id/txtvwTeam"
+        android:layout_alignStart="@+id/txtvwTeam"
+        android:layout_marginTop="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Position"
+        android:id="@+id/txtvwPosition"
+        android:layout_below="@+id/txtvwCountry"
+        android:layout_alignLeft="@+id/txtvwCountry"
+        android:layout_alignStart="@+id/txtvwCountry"
+        android:layout_marginTop="27dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age"
+        android:id="@+id/txtvwAge"
+        android:layout_marginTop="27dp"
+        android:layout_below="@+id/txtvwPosition"
+        android:layout_alignLeft="@+id/txtvwPosition"
+        android:layout_alignStart="@+id/txtvwPosition" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtxtName"
+        android:layout_above="@+id/edtxtTeam"
+        android:layout_toRightOf="@+id/txtvwTitle"
+        android:layout_alignRight="@+id/btnNext"
+        android:layout_alignEnd="@+id/btnNext" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtxtTeam"
+        android:layout_above="@+id/txtvwCountry"
+        android:layout_alignLeft="@+id/edtxtName"
+        android:layout_alignStart="@+id/edtxtName"
+        android:layout_alignRight="@+id/btnNext"
+        android:layout_alignEnd="@+id/btnNext" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtxtCountry"
+        android:layout_below="@+id/edtxtTeam"
+        android:layout_alignLeft="@+id/edtxtTeam"
+        android:layout_alignStart="@+id/edtxtTeam"
+        android:layout_alignRight="@+id/btnNext"
+        android:layout_alignEnd="@+id/btnNext" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtxtPosition"
+        android:layout_below="@+id/edtxtCountry"
+        android:layout_alignLeft="@+id/edtxtCountry"
+        android:layout_alignStart="@+id/edtxtCountry"
+        android:layout_alignRight="@+id/btnNext"
+        android:layout_alignEnd="@+id/btnNext" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtxtAge"
+        android:layout_alignBottom="@+id/txtvwAge"
+        android:layout_alignLeft="@+id/edtxtPosition"
+        android:layout_alignStart="@+id/edtxtPosition"
+        android:layout_alignRight="@+id/btnNext"
+        android:layout_alignEnd="@+id/btnNext" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/txtvwResult"
+        android:layout_above="@+id/btnEnter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp" />
+
+</RelativeLayout>
